@@ -1,0 +1,76 @@
+{
+  "expo": {
+    "name": "LivingWell 360",
+    "slug": "livingwell-360",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "livingwell-360",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fffbf5"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.livingwell360.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSMotionUsageDescription": "LivingWell 360 uses motion data to count your daily steps.",
+        "NSUserNotificationsUsageDescription": "LivingWell 360 sends reminders for medicine and meals."
+      }
+    },
+    "android": {
+      "package": "com.livingwell360.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#fffbf5"
+      },
+      "permissions": [
+        "android.permission.ACTIVITY_RECOGNITION",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.USE_EXACT_ALARM",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#d97706",
+          "sounds": [],
+          "androidMode": "default",
+          "androidCollapsedTitle": "LivingWell 360"
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Allow LivingWell 360 to access your motion data to count your daily steps."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "reactCompiler": true
+    }
+  }
+}
